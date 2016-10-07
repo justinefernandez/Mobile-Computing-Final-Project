@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        TextView signin = (TextView) findViewById(R.id.signin);
+        final TextView signin = (TextView) findViewById(R.id.signin);
         final EditText username = (EditText) findViewById(R.id.username);
         final EditText password = (EditText) findViewById(R.id.password);
         Button show = (Button) findViewById(R.id.showbutton);
@@ -82,6 +82,7 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(view.getContext(), MainActivity.class);
                         startActivityForResult(intent, 0);
+                        finish();
                     }
                     else
                     {
@@ -97,6 +98,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(view.getContext(), SignIn.class);
                 startActivityForResult(intent, 0);
+                finish();
             }
         });
     }

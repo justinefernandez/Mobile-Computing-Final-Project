@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
         imageView.setOnTouchListener(new View.OnTouchListener(){
             float initX,initY,finalX,finalY,diffX,diffY;
 
-
-
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 int event = motionEvent.getAction();
