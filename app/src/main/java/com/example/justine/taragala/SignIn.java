@@ -71,6 +71,16 @@ public class SignIn extends AppCompatActivity {
         });
     }
     @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(SignIn.this, Login.class);
+        startActivity(intent);
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        finish();
+    }
+    @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
         super.onDestroy();

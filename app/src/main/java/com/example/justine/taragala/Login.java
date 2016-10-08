@@ -98,8 +98,12 @@ public class Login extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(view.getContext(), SignIn.class);
                 startActivityForResult(intent, 0);
-                finish();
             }
         });
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        finish();
     }
 }
